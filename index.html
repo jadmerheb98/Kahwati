@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kahwati — Coffee Delivery App Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="#top" aria-label="Kahwati Home">
+        <span class="brand-mark">K</span>
+        <span>
+          <strong>Kahwati</strong>
+          <small>Coffee, your way</small>
+        </span>
+      </a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#shops">Coffee Shops</a>
+        <a href="#menu">Menus</a>
+        <a href="#points">Rewards</a>
+        <a href="#booking">Book a Spot</a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="ghost-btn" data-open="loginModal">Login</button>
+        <button class="primary-btn small" data-open="signupModal">Sign up</button>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero container">
+      <div class="hero-copy">
+        <div class="eyebrow"><span></span> Premium coffee platform for Lebanon</div>
+        <h1>Discover coffee shops, order fast, collect points, and book your favorite spot.</h1>
+        <p>Kahwati brings cafés, specialty coffee, snacks, sandwiches, takeaway, delivery, online payment, cash payment, and loyalty rewards into one luxury app experience.</p>
+        <div class="hero-actions">
+          <button class="primary-btn" data-open="signupModal">Start exploring</button>
+          <a class="secondary-btn" href="#shops">View cafés</a>
+        </div>
+        <div class="trust-row">
+          <div><strong>42+</strong><span>Coffee shops</span></div>
+          <div><strong>18k</strong><span>Monthly cups</span></div>
+          <div><strong>4.9</strong><span>Average rating</span></div>
+        </div>
+      </div>
+
+      <div class="phone-shell" aria-label="Mobile app preview">
+        <div class="phone-notch"></div>
+        <div class="phone-screen">
+          <div class="app-topbar">
+            <div>
+              <small>Good morning Jad</small>
+              <strong>What’s your coffee mood?</strong>
+            </div>
+            <button class="avatar">JM</button>
+          </div>
+
+          <div class="search-card">
+            <span>⌕</span>
+            <input type="text" value="Iced latte near me" aria-label="Search" />
+          </div>
+
+          <div class="mode-toggle">
+            <button class="active">Delivery</button>
+            <button>Takeaway</button>
+            <button>Book</button>
+          </div>
+
+          <div class="feature-tile">
+            <div>
+              <span class="mini-tag">Today’s pick</span>
+              <h3>Velvet Vanilla Cold Brew</h3>
+              <p>Earn 2x beans from Café Noir.</p>
+            </div>
+            <div class="cup-visual">☕</div>
+          </div>
+
+          <div class="app-section-title">
+            <strong>Nearby cafés</strong>
+            <a href="#shops">See all</a>
+          </div>
+
+          <div class="mini-shop-list">
+            <article>
+              <span class="shop-logo dark">N</span>
+              <div><strong>Noir Roastery</strong><small>12 min • 4.9 • $$</small></div>
+              <b>+80 pts</b>
+            </article>
+            <article>
+              <span class="shop-logo gold">B</span>
+              <div><strong>Bean Society</strong><small>8 min • 4.8 • $</small></div>
+              <b>+45 pts</b>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container category-strip" aria-label="Categories">
+      <button class="category-card active" data-category="all"><span>☕</span> All</button>
+      <button class="category-card" data-category="coffee"><span>🧊</span> Coffee</button>
+      <button class="category-card" data-category="snacks"><span>🥐</span> Snacks</button>
+      <button class="category-card" data-category="sandwich"><span>🥪</span> Sandwiches</button>
+      <button class="category-card" data-category="dessert"><span>🍰</span> Desserts</button>
+      <button class="category-card" data-category="healthy"><span>🥗</span> Healthy</button>
+    </section>
+
+    <section class="container stats-panel">
+      <article>
+        <span>01</span>
+        <h3>Smart coffee discovery</h3>
+        <p>Explore cafés by rating, distance, vibe, delivery time, menu items, and loyalty offers.</p>
+      </article>
+      <article>
+        <span>02</span>
+        <h3>Order, pay, collect</h3>
+        <p>Delivery, takeaway, online payment, cash payment, and points in one seamless checkout.</p>
+      </article>
+      <article>
+        <span>03</span>
+        <h3>Reserve your table</h3>
+        <p>Book a quiet work seat, terrace table, meeting corner, or coffee date spot in seconds.</p>
+      </article>
+    </section>
+
+    <section class="container section" id="shops">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow"><span></span> Available on Kahwati</span>
+          <h2>Featured coffee shops</h2>
+        </div>
+        <p>Luxury cards designed to preview how cafés would appear inside the final mobile app.</p>
+      </div>
+
+      <div class="shop-grid" id="shopGrid">
+        <article class="shop-card" data-type="coffee dessert">
+          <div class="shop-image img-one"><span>Specialty</span></div>
+          <div class="shop-content">
+            <div class="shop-head"><h3>Noir Roastery</h3><b>4.9</b></div>
+            <p>Dark interiors, premium single-origin coffee, signature cold brews, and desserts.</p>
+            <div class="pill-row"><span>12 min</span><span>Delivery</span><span>2x Beans</span></div>
+            <button class="full-btn" data-shop="Noir Roastery">Open menu</button>
+          </div>
+        </article>
+
+        <article class="shop-card" data-type="coffee snacks sandwich">
+          <div class="shop-image img-two"><span>Best Seller</span></div>
+          <div class="shop-content">
+            <div class="shop-head"><h3>Bean Society</h3><b>4.8</b></div>
+            <p>Fast takeaway, croissants, sandwiches, iced lattes, and office coffee boxes.</p>
+            <div class="pill-row"><span>8 min</span><span>Takeaway</span><span>+45 pts</span></div>
+            <button class="full-btn" data-shop="Bean Society">Open menu</button>
+          </div>
+        </article>
+
+        <article class="shop-card" data-type="coffee healthy sandwich">
+          <div class="shop-image img-three"><span>Bookable</span></div>
+          <div class="shop-content">
+            <div class="shop-head"><h3>Terrace Brew</h3><b>4.7</b></div>
+            <p>Outdoor terrace, brunch plates, fresh sandwiches, salads, and quiet work seats.</p>
+            <div class="pill-row"><span>18 min</span><span>Booking</span><span>Terrace</span></div>
+            <button class="full-btn" data-shop="Terrace Brew">Open menu</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="container section split-section" id="menu">
+      <div class="menu-copy">
+        <span class="eyebrow"><span></span> Menu preview</span>
+        <h2>Beautiful menus for coffee, snacks, sandwiches, and desserts.</h2>
+        <p>Every item can show ingredients, allergens, prep time, points earned, add-ons, and checkout options.</p>
+        <div class="payment-row">
+          <span>Apple Pay style</span>
+          <span>Credit Card</span>
+          <span>Cash</span>
+          <span>Wallet</span>
+        </div>
+      </div>
+
+      <div class="menu-board">
+        <div class="menu-tabs">
+          <button class="active">Popular</button>
+          <button>Cold</button>
+          <button>Food</button>
+        </div>
+        <div class="menu-list" id="menuList">
+          <article class="menu-item" data-name="Velvet Vanilla Cold Brew" data-price="4.50">
+            <span class="item-icon">🧊</span>
+            <div><strong>Velvet Vanilla Cold Brew</strong><small>Cold brew, vanilla cream, caramel dust</small></div>
+            <b>$4.50</b><button class="add-btn">+</button>
+          </article>
+          <article class="menu-item" data-name="Truffle Turkey Croissant" data-price="6.75">
+            <span class="item-icon">🥐</span>
+            <div><strong>Truffle Turkey Croissant</strong><small>Turkey, emmental, truffle mayo</small></div>
+            <b>$6.75</b><button class="add-btn">+</button>
+          </article>
+          <article class="menu-item" data-name="Halloumi Sunrise Sandwich" data-price="5.25">
+            <span class="item-icon">🥪</span>
+            <div><strong>Halloumi Sunrise Sandwich</strong><small>Halloumi, pesto, tomato, rocket</small></div>
+            <b>$5.25</b><button class="add-btn">+</button>
+          </article>
+          <article class="menu-item" data-name="Pistachio Cloud Cake" data-price="4.25">
+            <span class="item-icon">🍰</span>
+            <div><strong>Pistachio Cloud Cake</strong><small>Light cream, pistachio, sponge</small></div>
+            <b>$4.25</b><button class="add-btn">+</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section reward-section" id="points">
+      <div class="reward-card">
+        <div>
+          <span class="eyebrow"><span></span> Kahwati Beans</span>
+          <h2>Collect points from every coffee shop.</h2>
+          <p>Users earn Beans on every order, booking, and takeaway. Beans can unlock free drinks, discounts, free delivery, birthday gifts, and exclusive tasting events.</p>
+        </div>
+        <div class="beans-card">
+          <small>Your balance</small>
+          <strong>1,280 Beans</strong>
+          <div class="progress"><span style="width:72%"></span></div>
+          <p>220 Beans away from a free signature drink.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section booking-section" id="booking">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow"><span></span> Reservations</span>
+          <h2>Book a spot before arriving.</h2>
+        </div>
+        <p>Perfect for students, freelancers, coffee meetings, quiet work sessions, and terrace seats.</p>
+      </div>
+
+      <div class="booking-card">
+        <div class="booking-preview">
+          <span class="mini-tag">Live availability</span>
+          <h3>Terrace Brew — Jbeil</h3>
+          <p>Choose date, time, number of people, and preferred seating area.</p>
+          <div class="seat-map">
+            <button>Window</button><button class="selected">Terrace</button><button>Quiet</button><button>Meeting</button>
+          </div>
+        </div>
+        <form class="booking-form" id="bookingForm">
+          <label>Date<input type="date" required></label>
+          <label>Time<select required><option>10:00 AM</option><option>12:30 PM</option><option>04:00 PM</option><option>08:00 PM</option></select></label>
+          <label>People<select required><option>1 person</option><option>2 people</option><option>3 people</option><option>4 people</option><option>5+ people</option></select></label>
+          <button class="primary-btn" type="submit">Preview booking</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="container section checkout-section">
+      <div class="cart-card">
+        <div class="cart-head">
+          <div><span class="eyebrow"><span></span> Checkout</span><h2>Your cart</h2></div>
+          <button class="ghost-btn" id="clearCart">Clear</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+          <p class="empty-cart">Add items from the menu to preview checkout.</p>
+        </div>
+        <div class="checkout-total">
+          <span>Total</span><strong id="cartTotal">$0.00</strong>
+        </div>
+        <div class="checkout-actions">
+          <button class="secondary-btn">Cash on delivery</button>
+          <button class="primary-btn">Pay online</button>
+        </div>
+      </div>
+
+      <div class="app-features-card">
+        <h3>Included screens</h3>
+        <ul>
+          <li>Customer login, logout, and sign up preview</li>
+          <li>Coffee shop discovery and search</li>
+          <li>Menus with food, snacks, and add-to-cart</li>
+          <li>Delivery, takeaway, booking, online and cash payment</li>
+          <li>Rewards, points, wallet, and order status style</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="brand footer-brand"><span class="brand-mark">K</span><span><strong>Kahwati</strong><small>Coffee, your way</small></span></div>
+      <p>Prototype website preview for a premium coffee shop delivery and loyalty application.</p>
+      <div><button class="primary-btn small" data-open="signupModal">Create account</button></div>
+    </div>
+  </footer>
+
+  <div class="modal" id="loginModal" aria-hidden="true">
+    <div class="modal-card">
+      <button class="modal-close" data-close>×</button>
+      <span class="eyebrow"><span></span> Welcome back</span>
+      <h2>Login to Kahwati</h2>
+      <form id="loginForm">
+        <label>Email<input type="email" placeholder="jad@example.com" required></label>
+        <label>Password<input type="password" placeholder="••••••••" required></label>
+        <button class="primary-btn" type="submit">Login</button>
+      </form>
+      <p class="modal-note">This is a preview only. No real account is created.</p>
+    </div>
+  </div>
+
+  <div class="modal" id="signupModal" aria-hidden="true">
+    <div class="modal-card">
+      <button class="modal-close" data-close>×</button>
+      <span class="eyebrow"><span></span> Join Kahwati</span>
+      <h2>Create your coffee account</h2>
+      <form id="signupForm">
+        <label>Full name<input type="text" placeholder="Jad Merheb" required></label>
+        <label>Phone number<input type="tel" placeholder="+961 71 000 000" required></label>
+        <label>Email<input type="email" placeholder="jad@example.com" required></label>
+        <label>Password<input type="password" placeholder="Create password" required></label>
+        <button class="primary-btn" type="submit">Sign up</button>
+      </form>
+      <p class="modal-note">Preview mode: buttons show the user journey without backend connection.</p>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">Added to cart</div>
+  <script src="script.js"></script>
+</body>
+</html>
