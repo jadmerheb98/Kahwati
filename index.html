@@ -3,138 +3,102 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
-  <meta name="theme-color" content="#ffffff" />
-  <title>Kahwati App Preview</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#f7f1e8" />
+  <title>Kahwati — Coffee App</title>
   <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
+  <div class="splash" id="splash">
+    <div class="mark">ق</div>
+    <div class="splash-name">Kahwati</div>
+  </div>
+
   <main class="app-shell">
-    <section id="splash" class="splash-screen">
-      <div class="splash-mark">
-        <span>ق</span>
-        <small></small>
-      </div>
-    </section>
-
-    <section class="screen active" id="homeScreen">
-      <header class="topbar safe-x">
-        <button class="location-btn">
-          <span class="pin"><svg viewBox="0 0 24 24"><path d="M12 21s7-5.3 7-12a7 7 0 0 0-14 0c0 6.7 7 12 7 12Z"/><circle cx="12" cy="9" r="2.6"/></svg></span>
-          <span>Home Bsous</span>
-          <svg class="chev" viewBox="0 0 24 24"><path d="m7 10 5 5 5-5"/></svg>
+    <header class="topbar">
+      <button class="location-pill" aria-label="location">
+        <span class="pin">⌖</span>
+        <span><small>Deliver to</small><strong>Home, Jbeil</strong></span>
+      </button>
+      <div class="top-actions">
+        <button class="icon-btn" aria-label="notifications">
+          <svg viewBox="0 0 24 24"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 6-3 8h18c0-2-3-1-3-8Z"/><path d="M10 20a2 2 0 0 0 4 0"/></svg>
         </button>
-        <div class="top-actions">
-          <button class="icon-btn"><svg viewBox="0 0 24 24"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9Z"/><path d="M10 21h4"/></svg></button>
-          <button class="points-pill"><span>☕</span> 344</button>
-        </div>
-      </header>
-
-      <div class="safe-x">
-        <div class="notice">
-          <div class="notice-icon"><svg viewBox="0 0 24 24"><path d="M21 3 3 10l8 3 3 8 7-18Z"/></svg></div>
-          <div>
-            <strong>Address updated</strong>
-            <p>Showing cafés near you</p>
-          </div>
-          <button>Change</button>
-        </div>
-
-        <label class="search-box">
-          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-          <input type="text" placeholder="Search coffee, latte, sandwich" />
-        </label>
+        <a class="beans-pill" href="rewards.html"><span>☕</span> 344</a>
       </div>
+    </header>
 
-      <nav class="category-strip" aria-label="categories">
-        <button class="cat active"><span class="cat-img coffee"></span><em>All</em></button>
-        <button class="cat"><span class="cat-img cup"></span><em>Coffee</em></button>
-        <button class="cat"><span class="cat-img croissant"></span><em>Bakery</em></button>
-        <button class="cat"><span class="cat-img sandwich"></span><em>Snacks</em></button>
-        <button class="cat"><span class="cat-img dessert"></span><em>Dessert</em></button>
-      </nav>
-
-      <section class="promo-strip">
-        <article class="promo-card main-promo">
-          <div>
-            <span>Morning reward</span>
-            <h2>Buy 5 cups<br>get 1 free</h2>
-          </div>
-          <div class="promo-art cup-art"></div>
-        </article>
-        <article class="promo-card second-promo">
-          <div>
-            <span>Takeaway</span>
-            <h2>Ready in<br>10 min</h2>
-          </div>
-          <div class="promo-art bag-art"></div>
-        </article>
-      </section>
-
-      <section class="section safe-x">
-        <div class="section-head">
-          <h3>Popular cafés</h3>
-          <a href="cafes.html">See all</a>
-        </div>
-
-        <div class="cafe-list">
-          <a class="cafe-card" href="menu.html">
-            <div class="cafe-img img-one"><span>☕</span></div>
-            <div class="cafe-info">
-              <h4>Maison Roast</h4>
-              <p>12 min • 4.9 ★ • Free points</p>
-              <div class="tags"><span>Delivery</span><span>Takeaway</span></div>
-            </div>
-          </a>
-
-          <a class="cafe-card" href="menu.html">
-            <div class="cafe-img img-two"><span>🥐</span></div>
-            <div class="cafe-info">
-              <h4>Velvet Bean</h4>
-              <p>18 min • 4.8 ★ • Book a spot</p>
-              <div class="tags"><span>Breakfast</span><span>Rewards</span></div>
-            </div>
-          </a>
-        </div>
-      </section>
-    </section>
-
-    <section class="screen" id="searchScreen">
-      <header class="page-header safe-x"><h1>Search</h1><p>Find cafés, drinks, sandwiches.</p></header>
-      <div class="safe-x"><label class="search-box big"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input placeholder="What are you craving?" /></label></div>
-      <div class="chips safe-x"><button>Latte</button><button>Iced coffee</button><button>Sandwich</button><button>Croissant</button></div>
-    </section>
-
-    <section class="screen" id="menuScreen">
-      <header class="page-header safe-x"><h1>Menu</h1><p>Minimal preview menu.</p></header>
-      <div class="menu-list safe-x">
-        <article class="menu-item"><div class="menu-img">☕</div><div><h4>Iced Spanish Latte</h4><p>$4.50</p></div><button>+</button></article>
-        <article class="menu-item"><div class="menu-img">🥪</div><div><h4>Turkey Sandwich</h4><p>$6.00</p></div><button>+</button></article>
-        <article class="menu-item"><div class="menu-img">🍰</div><div><h4>Lotus Cake</h4><p>$3.75</p></div><button>+</button></article>
+    <section class="hero-card">
+      <div>
+        <p class="eyebrow">Your coffee ritual</p>
+        <h1>Order. Sip. Collect beans.</h1>
       </div>
+      <div class="cup-visual"><span></span></div>
     </section>
 
-    <section class="screen" id="ordersScreen">
-      <header class="page-header safe-x"><h1>Orders</h1><p>Track delivery and takeaway.</p></header>
-      <div class="order-card safe-x"><div><strong>Maison Roast</strong><p>Preparing • 8 min left</p></div><span>$12.50</span></div>
-      <div class="order-card safe-x"><div><strong>Velvet Bean</strong><p>Completed yesterday</p></div><span>$9.00</span></div>
-    </section>
+    <label class="search-card">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+      <input placeholder="Search coffee, croissant, café..." />
+    </label>
 
-    <section class="screen" id="accountScreen">
-      <header class="page-header safe-x"><h1>Account</h1><p>Login, rewards, bookings.</p></header>
-      <div class="profile-card safe-x"><div class="avatar">JM</div><h2>Good morning, Jad</h2><p>344 coffee points available</p><button>Sign in / Sign up</button></div>
-    </section>
-
-    <nav class="bottom-nav">
-      <button class="nav-item active" data-screen="homeScreen"><svg viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5V21h-6v-6H9v6H3V10.5Z"/></svg><span>Home</span></button>
-      <button class="nav-item" data-screen="searchScreen"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span>Search</span></button>
-      <button class="nav-item" data-screen="menuScreen"><svg viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg><span>Menu</span></button>
-      <button class="nav-item" data-screen="ordersScreen"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-2-1-2 1-2-1-2 1-2-1-2 1V3Z"/><path d="M9 8h6M9 12h6"/></svg><span>Orders</span></button>
-      <button class="nav-item" data-screen="accountScreen"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 14.5-4 16 0"/></svg><span>Me</span></button>
+    <nav class="mode-row" aria-label="order modes">
+      <button class="active">Delivery</button>
+      <button>Takeaway</button>
+      <button>Book a table</button>
+      <button>Rewards</button>
     </nav>
+
+    <section class="section-head">
+      <h2>Mood today</h2>
+      <a href="cafes.html">See all</a>
+    </section>
+    <div class="mood-row">
+      <a class="mood-card espresso" href="menu.html"><span>Espresso</span></a>
+      <a class="mood-card iced" href="menu.html"><span>Iced</span></a>
+      <a class="mood-card pastry" href="menu.html"><span>Pastry</span></a>
+      <a class="mood-card work" href="booking.html"><span>Work spot</span></a>
+    </div>
+
+    <section class="promo-stack">
+      <article class="promo-card primary">
+        <div><small>Morning drop</small><strong>Free delivery before 11</strong></div>
+        <a href="cafes.html">Explore</a>
+      </article>
+      <article class="promo-card secondary">
+        <div><small>Beans club</small><strong>Buy 5 drinks, get 1 free</strong></div>
+        <a href="rewards.html">Collect</a>
+      </article>
+    </section>
+
+    <section class="section-head">
+      <h2>Nearby cafés</h2>
+      <a href="cafes.html">Map</a>
+    </section>
+    <div class="cafe-list">
+      <a class="cafe-card" href="menu.html">
+        <div class="cafe-img roast"></div>
+        <div><strong>Maison Roast</strong><p>12 min · 4.9 · Specialty coffee</p></div>
+        <span class="mini-badge">+ beans</span>
+      </a>
+      <a class="cafe-card" href="menu.html">
+        <div class="cafe-img velvet"></div>
+        <div><strong>Velvet Bean</strong><p>18 min · 4.8 · Desserts & iced drinks</p></div>
+        <span class="mini-badge">open</span>
+      </a>
+      <a class="cafe-card" href="menu.html">
+        <div class="cafe-img cabin"></div>
+        <div><strong>Cup Cabin</strong><p>Book seats · calm workspace</p></div>
+        <span class="mini-badge">seats</span>
+      </a>
+    </div>
   </main>
-  <script src="script.js"></script>
+
+  <nav class="bottom-nav">
+    <a class="active" href="index.html"><svg viewBox="0 0 24 24"><path d="M3 11 12 4l9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1Z"/></svg><span>Home</span></a>
+    <a href="cafes.html"><svg viewBox="0 0 24 24"><path d="M5 8h10v5a5 5 0 0 1-5 5 5 5 0 0 1-5-5Z"/><path d="M15 10h2a3 3 0 0 1 0 6h-2"/><path d="M4 20h14"/></svg><span>Cafés</span></a>
+    <a href="menu.html"><svg viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg><span>Menu</span></a>
+    <a href="cart.html"><svg viewBox="0 0 24 24"><path d="M6 6h15l-2 8H8L6 3H3"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg><span>Cart</span></a>
+    <a href="account.html"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span>Me</span></a>
+  </nav>
 </body>
 </html>
